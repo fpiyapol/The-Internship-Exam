@@ -1,0 +1,5 @@
+encapsulation - process of adding headers (and sometimes trailers) around some data
+User Datagram Protocol - connectionless protocol
+3 way handshake - tcp connection establishment
+Ethernet - IEEE 802.3
+router - device that forwards data packets
