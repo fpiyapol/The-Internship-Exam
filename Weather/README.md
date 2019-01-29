@@ -6,9 +6,10 @@
 ```
 pip install xmltodict
 ```
-* 
+* จากนั้นทำการรันโปรแกรมโดยใช้คำสั่ง
 ```
 py XML_to_JSON.py file.xml
 ```
+(file.xml คือ ไฟล์ที่เราต้องการแปลงเป็น json)
 
 <b>มีการใช้ Library และ code บางส่วนจาก : https://pypi.org/project/xmltodict/</b>
