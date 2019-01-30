@@ -26,8 +26,7 @@ public class HangmanGameImplement {
 	public void loadWords(String category) {
 		
 		//when export jar use : new InputStreamReader(getClass().getResourceAsStream("/"+category+".txt"))
-//		new FileReader(category+".txt")
-		try(BufferedReader reader = new BufferedReader(new InputStreamReader(getClass().getResourceAsStream("/"+category+".txt")))){
+		try(BufferedReader reader = new BufferedReader(new FileReader(category+".txt"))){
 			String tmp = "";
 			
 			words = new ArrayList<>();
