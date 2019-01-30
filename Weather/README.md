@@ -15,6 +15,6 @@ py XML_to_JSON.py file.xml
 <b>มีการใช้ Library และ code บางส่วนจาก : https://pypi.org/project/xmltodict/</b>
 
 ---
-นายปิยะพล เพิ่มพงศ์ไพบูลย์
-60070052@kmitl.ac.th
+นายปิยะพล เพิ่มพงศ์ไพบูลย์<br>
+60070052@kmitl.ac.th<br>
 0924063439

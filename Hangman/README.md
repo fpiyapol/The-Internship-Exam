@@ -22,6 +22,6 @@ java -jar hangman_game.jar
 <p align=center><img src="img/hangman_screen_2.png"></p>
 
 ---
-นายปิยะพล เพิ่มพงศ์ไพบูลย์
-60070052@kmitl.ac.th
+นายปิยะพล เพิ่มพงศ์ไพบูลย์<br>
+60070052@kmitl.ac.th<br>
 0924063439
