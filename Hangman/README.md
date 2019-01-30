@@ -18,5 +18,10 @@ java -jar hangman_game.jar
     * เมื่อตอบถูกคะแนนจะเพิ่มขึ้นเท่ากับจำนวนตัวอักษรที่ปรากฎในคำคูณด้วย 10
     * เมื่อตอบผิดคะแนนจะลบ 5 (สามารถทายผิดได้ 6 ครั้ง)
 
-<img src="img/hangman_screen_1.png">
-<img src="img/hangman_screen_2.png">
+<p align=center><img src="img/hangman_screen_1.png"></p>
+<p align=center><img src="img/hangman_screen_2.png"></p>
+
+---
+นายปิยะพล เพิ่มพงศ์ไพบูลย์
+60070052@kmitl.ac.th
+0924063439

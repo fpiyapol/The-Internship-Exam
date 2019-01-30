@@ -13,3 +13,8 @@ py XML_to_JSON.py file.xml
 (file.xml คือ ไฟล์ที่เราต้องการแปลงเป็น json)
 
 <b>มีการใช้ Library และ code บางส่วนจาก : https://pypi.org/project/xmltodict/</b>
+
+---
+นายปิยะพล เพิ่มพงศ์ไพบูลย์
+60070052@kmitl.ac.th
+0924063439
