@@ -9,7 +9,7 @@ import java.util.Random;
 public class HangmanGameImplement {
 	
 	private ArrayList<String> words;
-	private ArrayList<Character> guessing;
+	private ArrayList<Character> guessing, wrong_guess;
 	private String word, hint;
 	private Random random;
 	private int no, incorrect, max_score, score;
@@ -50,6 +50,8 @@ public class HangmanGameImplement {
 		System.out.println("Hint: " + "\" " + hint + " \"");
 		
 		guessing = new ArrayList<>();
+		wrong_guess = new ArrayList<>();
+		
 		for(int chr = 0; chr < word.length(); chr++) {
 			if(Character.isDigit(word.charAt(chr))) {
 				guessing.add(word.charAt(chr));
@@ -92,6 +94,7 @@ public class HangmanGameImplement {
 		if(!check) {
 			score -= 5;
 			incorrect += 1;
+			wrong_guess.add(character.charAt(0));
 		}
 		
 		if(incorrect == 1) {
@@ -133,7 +136,19 @@ public class HangmanGameImplement {
 			System.out.print(c + " ");
 		}
 		
-		System.out.println("\nscore : " + score + "/" +max_score +", remaining wrong guess : " + (6-incorrect));
+		String wg = "";
+
+		if(wrong_guess.size() != 0) {
+			wg = "wrong guessed : ";
+			for(char c:wrong_guess) {
+				wg += c;
+				wg += ", ";
+			}
+			wg = wg.substring(0, wg.length()-2);
+		}
+		
+		
+		System.out.println("\nscore : " + score + "/" +max_score +", remaining wrong guess : " + (6-incorrect) + wg);
 	}
 	
 	public void printHangman() {
