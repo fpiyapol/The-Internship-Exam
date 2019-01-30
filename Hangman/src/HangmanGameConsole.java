@@ -10,11 +10,19 @@ public class HangmanGameConsole {
 		scanner = new Scanner(System.in);
 		
 		//select category
-		System.out.println("Select Category : ");
-		System.out.println("\t1.Car");
-		System.out.println("\t2.Network");
+		while(true) {
+			System.out.println("Select Category : ");
+			System.out.println("\t1.Car");
+			System.out.println("\t2.Network");
+			category = scanner.nextLine();
+			if(!category.equals("1") && !category.equals("2")) {
+				System.out.println("Invalid, Please enter number between 1-2");
+			}else {
+				break;
+			}
+		}
 		
-		category = scanner.nextLine();
+		
 		
 		game.loadWords(category);
 		
@@ -25,11 +33,12 @@ public class HangmanGameConsole {
 			game.printGuessing();
 			System.out.print("> ");
 			character = scanner.nextLine();
-			if(game.guess(character)) {
-				
-			}else {
-				game.printHangman();
+			if(game.checkInput(character)) {
+				if(!game.guess(character)) {
+					game.printHangman();
+				}
 			}
+			
 		}
 		
 		game.printGuessing();

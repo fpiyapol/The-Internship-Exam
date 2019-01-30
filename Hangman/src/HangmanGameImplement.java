@@ -2,6 +2,7 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -23,6 +24,8 @@ public class HangmanGameImplement {
 								"_|__      "};
 	
 	public void loadWords(String category) {
+		
+//		export jar use : new InputStreamReader(getClass().getResourceAsStream("/"+category+".txt"))
 		try(BufferedReader reader = new BufferedReader(new FileReader(category+".txt"))){
 			String tmp = "";
 			
@@ -60,8 +63,22 @@ public class HangmanGameImplement {
 		
 	}
 	
+	public boolean checkInput(String character) {
+		char c = character.charAt(0);
+		
+		if(character.length() > 1) {
+			System.out.println("You can input only 1 character!");
+			return false;
+		}else if(!(c >= 'a' && c <= 'z') && !(c >= 'A' && c <= 'Z')) {
+			System.out.println("Invalid input");
+			return false;
+		}
+		return true;
+	}
+	
 	public boolean guess(String character) {
 		check = false;
+		
 		for(int chr = 0; chr < word.length(); chr++) {
 			if(word.charAt(chr) == Character.toUpperCase(character.charAt(0)) || word.charAt(chr) == Character.toLowerCase(character.charAt(0))) {
 				if(guessing.get(chr) != Character.toUpperCase(character.charAt(0)) && guessing.get(chr) != Character.toLowerCase(character.charAt(0))) {
@@ -116,7 +133,7 @@ public class HangmanGameImplement {
 			System.out.print(c + " ");
 		}
 		
-		System.out.println("\n" + score + "/" +max_score);
+		System.out.println("\nscore : " + score + "/" +max_score +", remaining wrong guess : " + (6-incorrect));
 	}
 	
 	public void printHangman() {
