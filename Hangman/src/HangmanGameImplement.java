@@ -25,8 +25,9 @@ public class HangmanGameImplement {
 	
 	public void loadWords(String category) {
 		
-//		export jar use : new InputStreamReader(getClass().getResourceAsStream("/"+category+".txt"))
-		try(BufferedReader reader = new BufferedReader(new FileReader(category+".txt"))){
+		//when export jar use : new InputStreamReader(getClass().getResourceAsStream("/"+category+".txt"))
+//		new FileReader(category+".txt")
+		try(BufferedReader reader = new BufferedReader(new InputStreamReader(getClass().getResourceAsStream("/"+category+".txt")))){
 			String tmp = "";
 			
 			words = new ArrayList<>();
@@ -139,7 +140,7 @@ public class HangmanGameImplement {
 		String wg = "";
 
 		if(wrong_guess.size() != 0) {
-			wg = "wrong guessed : ";
+			wg = ", wrong guessed : ";
 			for(char c:wrong_guess) {
 				wg += c;
 				wg += ", ";
@@ -147,7 +148,7 @@ public class HangmanGameImplement {
 			wg = wg.substring(0, wg.length()-2);
 		}
 		
-		
+		System.out.println("");
 		System.out.println("\nscore : " + score + "/" +max_score +", remaining wrong guess : " + (6-incorrect) + wg);
 	}
 	
@@ -155,6 +156,7 @@ public class HangmanGameImplement {
 		for(String hm:hangman) {
 			System.out.println(hm);
 		}
+		System.out.println("");
 	}
 	
 	public void summary() {
